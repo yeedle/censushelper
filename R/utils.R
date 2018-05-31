@@ -29,5 +29,9 @@ map_it <- function(sf, palette = "OrRd", provider = "CartoDB.Positron", ...) {
         bringToFront = TRUE
         ),
       ...
-      )
+      ) %>%
+    addLegend("bottomright", pal = pal, values = ~value,
+              title = "Number of Yiddish Speakers",
+              opacity = 1
+    )
 }

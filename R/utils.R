@@ -10,7 +10,7 @@
 #' @export
 #'
 #' @examples
-map_it <- function(sf, palette = "OrRd", provider = leaflet::providers$CartoDB.Positron, ...) {
+map_it <- function(sf, palette = "OrRd", provider = "CartoDB.Positron", ...) {
   pal <- leaflet::colorNumeric(palette = palette, domain = sf %>% dplyr::pull(value))
   leaflet::leaflet(sf) %>%
     leaflet::addProviderTiles(provider) %>%

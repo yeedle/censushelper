@@ -1,0 +1,16 @@
+Package: censushelper
+Type: Package
+Title: Helper Functions For Census Work
+Version: 0.1.0
+Author: Yeedle Neuwirth
+Maintainer: Yeedle Neuwirth <abeneuwirth@gmail.com>
+Description: Functions that help working with census data.
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: dplyr,
+    sf,
+    tidycensus,
+    leaflet
+Suggests: tidyverse
+RoxygenNote: 6.0.1

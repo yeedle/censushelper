@@ -13,7 +13,6 @@
 map_it <- function(sf, palette = "OrRd", provider = "CartoDB.Positron", ...) {
   pal <- leaflet::colorNumeric(palette = palette, domain = sf %>% dplyr::pull(value))
   leaflet::leaflet(sf) %>%
-    leaflet::addProviderTiles(provider) %>%
     leaflet::addPolygons(
       fillColor = ~pal(value),
       weight = .1,
